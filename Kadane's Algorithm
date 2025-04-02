@@ -1,0 +1,9 @@
+class Solution:
+    def maxSubArraySum(self, arr):
+        # Your code here
+        maxh=0
+        maxf=float('-inf')
+        for num in arr:
+            maxh=max(num, maxh+num)
+            maxf=max(maxf,maxh)
+        return maxf  
